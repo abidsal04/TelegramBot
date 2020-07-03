@@ -224,7 +224,7 @@ def cancel(update, context):
 
 def main():
     
-    updater = Updater("1138806211:AAE65hO0npCV4cl7u5r-tG-Q7gVkT88Kxvw", use_context=True)
+    updater = Updater("TOKEN", use_context=True)
 
     dp = updater.dispatcher
     

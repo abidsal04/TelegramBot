@@ -204,7 +204,8 @@ def level(update, context):
         level = 'Level2'
     else:
         level = 'Level1'
-
+        
+    # links of all whatsapp groups
     links = {'Level1':'https://chat.whatsapp.com/GM6wnMJWrUJLMwYGKzE7M3', 'Level2':'https://chat.whatsapp.com/F7hkEaGhroi9AmRWd1nw1q', 'Level3':'https://chat.whatsapp.com/D1nvBni5VZNEbkDPIHiTta', 'Level4':'https://chat.whatsapp.com/HCpIgmMOHwM7NjFz7mIvky'}
 
     update.message.reply_text('Based on your skills and experience, we feel you should join the SideProjects levelling process at:'

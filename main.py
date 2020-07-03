@@ -206,7 +206,8 @@ def level(update, context):
     f' - {level}\n\n'
     'Please further communicate with SideProjects admin. Happy Coding!')
 
-    
+    # send documents and audio
+    context.bot.send_document(chat_id=id, document=open('documents/{}.pdf'.format(level), 'rb'))
     context.bot.send_voice(chat_id=id, voice=open('audio/{}.mp3'.format(level), 'rb'))
     
 

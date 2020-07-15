@@ -483,8 +483,6 @@ def main():
     updater = Updater(
         os.getenv("TELEGRAM_TOKEN",""), use_context=True)
 
-    # updater = Updater("1119136803:AAEIOr8CuuBfH5ldclUVJnQ85z8WwlDAGMw", use_context=True)
-
     dp = updater.dispatcher
     
 

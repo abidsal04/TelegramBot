@@ -6,6 +6,7 @@ from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters,
 from teleBotDatabase import TeleDB
 import os
 from dotenv import load_dotenv
+
 load_dotenv()
 
 db = TeleDB()

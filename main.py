@@ -38,7 +38,6 @@ YES_NO_OPTIONS = [['Yes'], ['No']]
 
 def start(update, context):
     id = update.message.chat_id
-    context.user_data['Chat_id'] = id
     update.message.reply_text('Listen audio carefully.')
     context.bot.send_voice(chat_id=id, voice=open('audio/Introductory.ogg', 'rb'))
     update.message.reply_text('Press /fillup to Continue')
@@ -463,9 +462,11 @@ Github Id : {context.user_data['Github']}\n
     f'Click to join Telgram group {links[level]}\n\n'
     'Please further communicate with SideProjects admin. Happy Coding!')
 
+    id = update.message.chat_id
+
     # sending documents and audio
-    context.bot.send_document(chat_id=context.user_data['Chat_id'], document=open('documents/{}.pdf'.format(level), 'rb'))
-    context.bot.send_voice(chat_id=context.user_data['Chat_id'], voice=open('audio/Instruction.ogg', 'rb'))
+    context.bot.send_document(chat_id=id, document=open('documents/{}.pdf'.format(level), 'rb'))
+    context.bot.send_voice(chat_id=id, voice=open('audio/Instruction.ogg', 'rb'))
     
 
     return ConversationHandler.END

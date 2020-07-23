@@ -62,7 +62,7 @@ def fill(update, context):
 
 def audio(update, context):
     file = context.bot.get_file(update.message.voice.file_id)
-    file.download(f'ReceivedAudio/{update.message.from_user.first_name}.ogg')
+    file.download(f'ReceivedAudio/{update.message.from_user["username"]}.ogg')
 
     reply_keyboard = [['Submit'], ['Change']]
     update.message.reply_text('Want to change the audio or submit it?',
@@ -442,6 +442,8 @@ Leadership: {context.user_data['Leadership']}\n
 Github Id : {context.user_data['Github']}\n
 '''
     )
+
+    context.bot.send_voice(chat_id=-1001467021890, voice=open(f'ReceivedAudio/{update.message.from_user["username"]}.ogg', 'rb'))
 
 
 
